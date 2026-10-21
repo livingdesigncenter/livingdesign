@@ -135,7 +135,7 @@ function render(lang){
     vid.setAttribute('aria-label',v.caption[lang]);
     fig.hidden=false;
   }else fig.hidden=true;
-  $('researchCards').innerHTML=t.research.map((r,i)=>`<button class="card area-link" type="button" data-coming="research"><div class="num">RESEARCH ${String(i+1).padStart(2,'0')}</div><h3>${safe(r[0])}</h3><p>${safe(r[1])}</p><span class="card-arrow" aria-hidden="true">↗</span></button>`).join('');
+  $('researchCards').innerHTML=t.research.map((r,i)=>`<button class="card area-link" type="button" data-coming="research"><div class="num">RESEARCH ${String(i+1).padStart(2,'0')}</div><h3>${safe(r[0])}</h3><p>${safe(r[1])}</p></button>`).join('');
   $('businessCards').innerHTML=t.business.map((r,i)=>`<button class="service area-link" type="button" data-coming="business"><div class="num">${String(i+1).padStart(2,'0')}</div><b>${safe(r[0])}</b><p>${safe(r[1])}</p><span class="card-arrow" aria-hidden="true">↗</span></button>`).join('');
   $('projectCards').innerHTML=t.projects.map((r,i)=>`<article class="project-tile"><div class="num">${String(i+1).padStart(2,'0')} / ARCHIVE</div><h3>${safe(r[0])}</h3><div>${safe(r[1])}</div></article>`).join('');
   $('profiles').innerHTML=site.people.map(p=>{
